@@ -18,7 +18,7 @@ import java.io.RandomAccessFile;
 public class UploadServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	public static final String UPLOAD_DIR = "upload_dir";
+	public static final String UPLOAD_DIR = "/Users/daipeng";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int resumableChunkNumber        = getResumableChunkNumber(request);
@@ -64,7 +64,8 @@ public class UploadServlet extends HttpServlet {
         if (info.uploadedChunks.contains(new ResumableInfo.ResumableChunkNumber(resumableChunkNumber))) {
             response.getWriter().print("Uploaded."); //This Chunk has been Uploaded.
         } else {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            //response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            response.setStatus(HttpServletResponse.SC_MOVED_TEMPORARILY);
         }
     }
 

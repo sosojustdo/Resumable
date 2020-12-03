@@ -3,10 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.resumable</groupId>
-	<artifactId>java-example</artifactId>
+	<artifactId>resumable</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>resumable upload example</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -29,7 +28,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>resumable.js</finalName>
+		<finalName>resumable</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
@@ -44,14 +43,6 @@
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 		</plugins>
