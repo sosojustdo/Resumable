@@ -1,6 +1,5 @@
 package com.resumable.upload;
 
-import java.io.*;
 import java.util.HashMap;
 
 /**
